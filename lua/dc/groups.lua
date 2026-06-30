@@ -43,7 +43,7 @@ function M.setup(config)
     TabLine = { fg = c.comment, bg = c.menu },
     TabLineFill = { bg = c.background },
     TabLineSel = { fg = c.foreground, bg = c.current_line },
-    WinSeparator = { fg = c.current_line },
+    WinSeparator = { fg = c.comment },
     VertSplit = { link = "WinSeparator" },
     Directory = { fg = c.cyan },
     Title = { fg = c.purple, bold = true },
