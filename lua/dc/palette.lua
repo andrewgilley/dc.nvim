@@ -1,4 +1,3 @@
--- Dracula palette (MIT), jittered once per session.
 local original = {
   background = "#282a36",
   current_line = "#44475a",
@@ -12,7 +11,6 @@ local original = {
   red = "#ff5555",
   yellow = "#f1fa8c",
 
-  -- Dracula-derived surfaces used for UI and diff highlights.
   menu = "#21222c",
   selection = "#44475a",
   subtle = "#343746",
@@ -42,10 +40,12 @@ end
 
 local function jitter(hex)
   local channels = {}
+
   for value in hex:gmatch("%x%x") do
     local channel = tonumber(value, 16) + random(11) - 5
     channels[#channels + 1] = math.max(0, math.min(255, channel))
   end
+
   return string.format("#%02x%02x%02x", channels[1], channels[2], channels[3])
 end
 
